@@ -34,3 +34,30 @@ function init() {
                  message: 'What is the office number?',
             }
         ])
+        .then(({name, id, email, officeNumber}) => {
+            const manager = new Manager(name, id, email, officeNumber);
+            teamMemberHtmlArr.push(generateManagerCard(manager));
+            mainMenu();
+        });
+    }
+    function mainMenu() {
+        inquirer.prompt([
+            {
+                 type: 'list',
+                 name: 'addedRole',
+                 message: 'Would you like to add another employee?',
+                 choices: ["Engineer", "Intern", "Team Completed"],
+                },
+            ])
+            .then(answers => {
+                switch (answers.addedRole) {
+                    case "Engineer":
+                        return engineerCreate();
+                    case "Intern":
+                        return internCreate();
+                    default:
+                        return generateHtml();
+                }
+
+            })
+    }
