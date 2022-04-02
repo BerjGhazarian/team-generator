@@ -18,5 +18,6 @@ Quick and easy steps for an employee to show basic information about ones self.
 
 ## Links
 Github repo : https://github.com/BerjGhazarian/team-generator
-Demo : 
+
+Demo : https://drive.google.com/file/d/1c8-lyH7EjxoUiDdf5eNJefsDZDNtw3LU/view
 
